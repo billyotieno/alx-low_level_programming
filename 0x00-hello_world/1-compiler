@@ -1,2 +1,2 @@
 #!/bin/bash
-gcc -c $CFILE -o c.o -Wall -Werror -Wextra -pedantic -std=gnu89
+gcc -c $CFILE -o "${CFILE%?}o" -Wall -Werror -Wextra -pedantic -std=gnu89
