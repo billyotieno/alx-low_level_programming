@@ -1,0 +1,2 @@
+#!/bin/bash
+gcc $CFILE -o cisfun -Wall -Werror -Wextra -pedantic -std=gnu89
