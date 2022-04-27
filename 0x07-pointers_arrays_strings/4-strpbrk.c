@@ -4,7 +4,7 @@
  * _strpbrk - Search a string for bytes
  * @s: string
  * @accept: string to match
- * Return: Pointer to the byte in 
+ * Return: Pointer to the byte in
  * or NULL if no such byte is found.
  */
 
