@@ -48,4 +48,4 @@ int helpr(int n, int d)
 		return (1);
 	else
 		return (helpr(n, d + 1));
-
+}
