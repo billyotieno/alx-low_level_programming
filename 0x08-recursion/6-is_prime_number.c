@@ -1,9 +1,9 @@
 #include "main.h"
 
 /**
- * is_prime_number - get a prime number
- * @n: int 
- * Return: 1 if prime, 0 if not
+ * is_prime_number - determine if a number is a prime number
+ * @n: int number
+ * Return: 1 if prime, 0 otherwise
  */
 
 int is_prime_number(int n)
@@ -12,7 +12,7 @@ int is_prime_number(int n)
 		return (0);
 	if (n < 4)
 		return (1);
-	return (helpr(n, 2));
+	return (hai(n, 2));
 }
 
 /**
@@ -34,18 +34,18 @@ int _sqrt(int x, int i)
 }
 
 /**
- * helpr - helper function, recursive steps taken
+ * hai - helper function, recursive steps taken
  * @n: number given to original function is_prime_number
  * @d: incrementer divisor
  * Return: 0 if not prime, 1 if prime
  */
 
-int helpr(int n, int d)
+int hai(int n, int d)
 {
 	if (n % d == 0)
 		return (0);
 	else if (_sqrt(n, 1) < d)
 		return (1);
 	else
-		return (helpr(n, d + 1));
+		return (hai(n, d + 1));
 }
