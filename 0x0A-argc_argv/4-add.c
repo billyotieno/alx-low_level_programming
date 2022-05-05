@@ -1,4 +1,4 @@
-#include "main.h"
+i#include "main.h"
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -7,6 +7,7 @@
  * @argc: argument count
  * @argv: argument vector, array of strings
  * Description: If no number is passed to program, print 0.
+ * Return: O
  */
 
 int main(int argc, char *argv[])
