@@ -5,7 +5,6 @@
 /**
  * get_number_of_words - function to calculate number of words
  * @str: string being passed to check for words
- *
  * Return: number of words
  */
 int get_number_of_words(char *str)
@@ -80,7 +79,10 @@ char **strtow(char *str)
 				c++;
 			}
 			words[b][c] = '\0';
-			b++; c = 0; length = 0; str++;
+			b++; 
+			c = 0; 
+			length = 0; 
+			str++;
 		}
 	}
 	return (words);
