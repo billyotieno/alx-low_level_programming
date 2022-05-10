@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * _calloc - allocates memory for an [] given number of elements and size
+ * _calloc - allocates memory for an arr given number of elements and size
  * @nmemb: no. of elements
  * @size: size of each element
  * Return: returns pointer allocated to memory
