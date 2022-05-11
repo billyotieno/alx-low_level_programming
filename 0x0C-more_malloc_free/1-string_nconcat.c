@@ -1,51 +1,33 @@
 #include "main.h"
-#include <stdio.h>
-
 /**
- * string_nconcat - function concatenates two strings
- * @s1: 1st string
- * @s2: 2nd string
- * @n: bytes to include of s2
- * Return: NULL if false
+ * string_nconcat - concatenates 2 strings
+ * @s1: first string
+ * @s2: second string
+ * @n: number of bytes to copy from second string
+ * Return: pointer to new string
  */
-
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
-	char *p;
-	int strlen1, v, u;
+	unsigned int i, j, len1 = 0, len2 = 0;
+	char *new_str;
 
 	if (s1 == NULL)
 		s1 = "";
 	if (s2 == NULL)
 		s2 = "";
-
-	strlen1 = (unsigned int)_strlen(s1);
-	p = malloc((strlen1 + n + 1) * sizeof(char));
-	if (p == NULL)
+	while (*(s1 + len1) != '\0')
+		len1++;
+	while (*(s2 + len2) != '\0')
+		len2++;
+	if (n >= len2)
+		n = len2;
+	new_str = malloc(sizeof(char) * (len1 + n + 1));
+	if (new_str == NULL)
 		return (NULL);
-	for (v = 0, u = 0; v < (strlen1 + n); v++)
-	{
-		if (v < strlen1)
-			p[v] = s1[v];
-		else
-			p[v] = s2[u++];
-	}
-	p[v] = '\0';
-
-	return (p);
-}
-
-/**
- * _strlen - function finds string length
- * @s: string
- * Return: length of string
- */
-
-int _strlen(char *s)
-{
-	int i;
-
-	for (i = 0; s[i] != '\0'; i++)
-		;
-	return (i);
+	for (i = 0; i < len1; i++)
+		new_str[i] = s1[i];
+	for (j = 0; j < n; i++, j++)
+		new_str[i] = s2[j];
+	new_str[i] = '\0';
+	return (new_str);
 }
