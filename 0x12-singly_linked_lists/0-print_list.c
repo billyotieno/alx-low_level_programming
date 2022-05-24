@@ -16,7 +16,7 @@ size_t print_list(const list_t *h)
 	while (present_node != NULL)
 	{
 		if (present_node->len)
-			printf("[%d] %s\n", present_node->len, present_node->str);
+			printf("[%u] %s\n", present_node->len, present_node->str);
 		else
 			printf("[0] (nil)\n");
 		present_node = present_node->next;
