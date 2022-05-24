@@ -29,4 +29,15 @@ list_t *add_node(list_t **head, const char *str)
 	return (new);
 }
 
-
+/**
+ * string_length - returns the length of string.
+ * @s: string.
+ * Return: length of @s.
+ */
+int string_length(char *s)
+{
+	if (*s == 0)
+		return (0);
+	else
+		return (1 + string_length(s + 1));
+}
