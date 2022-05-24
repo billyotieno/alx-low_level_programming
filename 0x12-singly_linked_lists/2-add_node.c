@@ -1,20 +1,5 @@
 #include "lists.h"
 
-int string_length(char *s);
-
-/**
- * string_length - returns the length of string.
- * @s: string.
- * Return: length of @s.
- */
-int string_length(char *s)
-{
-	if (*s == 0)
-		return (0);
-	else
-		return (1 + string_length(s + 1));
-}
-
 /**
  * add_node - adds a new node at the beginning of a list_t list.
  * @head: pointer to the first element of the list.
