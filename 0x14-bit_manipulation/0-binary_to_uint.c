@@ -2,29 +2,29 @@
 #include <stdio.h>
 
 /**
- * binary_to_uint - binary to inti
+ * binary_to_uint - binary to int
  * @b: char string
  * Return: converted decimal number or 0
  */
 unsigned int binary_to_uint(const char *b)
 {
-	unsigned int sum, power;
-	int len;
+	unsigned int sum = 0;
+	unsigned int power = 1;
+	int i = 0;
 
-	if (b == NULL)
+	if (!b)
 		return (0);
-
-	for (len = 0; b[len]; len++)
+	while (b[i])
+		i++;
+	i--;
+	while (i >= 0)
 	{
-		if (b[len] != '0' && b[len] != '1')
+		if (b[i] != '0' && b[i] != '1')
 			return (0);
-	}
-
-	for (power = 1, sum = 0, len--; len >= 0; len--, power *= 2)
-	{
-		if (b[len] == '1')
+		if (b[i] == '1')
 			sum += power;
+		i--;
+		power += power;
 	}
-
 	return (sum);
 }
